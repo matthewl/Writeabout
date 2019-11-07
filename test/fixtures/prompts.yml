@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+spring:
+  prompt: the changing of winter to spring
+
+summer:
+  prompt: the long summer nights
+
+autumn:
+  prompt: the falling leaves of autumn
+
+winter:
+  prompt: the cold dark nights of winter

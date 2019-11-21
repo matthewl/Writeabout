@@ -1,24 +1,16 @@
-# README
+# Welcome to WriteAbout
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## What is WriteAbout?
 
-Things you may want to cover:
+WriteAbout is a random writing prompt generator. I've been frequently stuck with writing ideas in the past, but rather than looking for something planned to write about, I wanted to vary my writing.
 
-* Ruby version
+## What's coming up?
 
-* System dependencies
+I'm working on this on my own time, so features will be delivered as and when I can fit the time in to work on them.
 
-* Configuration
+Here's a little lightweight roadmap of what I am hoping to add in the next few months:
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+- A cookies and privacy policy page.
+- A terms page.
+- An RSS feed for a daily random writing prompt.
+- An API to fetch a random writing prompt.

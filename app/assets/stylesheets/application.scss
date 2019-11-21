@@ -1,3 +1,5 @@
+$enable-responsive-font-sizes: true;
+
 @import "bootstrap/scss/bootstrap";
 
 /*
@@ -24,7 +26,6 @@ a:hover {
 /*
  * Base structure
  */
-
 html,
 body {
   height: 100%;
@@ -40,8 +41,16 @@ body {
 }
 
 .cover-container {
-  max-width: 42em;
+  max-width: 100%;
 }
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+  .cover-container {
+    max-width: 58em;
+  }
+}
+
 
 /*
  * Header

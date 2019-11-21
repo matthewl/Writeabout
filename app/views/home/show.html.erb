@@ -1,4 +1,20 @@
-<h1>Write About</h1>
-<h2>A writing prompt generator for when you have writer's block</h2>
+<div class="cover-container d-flex w-100 h-100 py-3 mx-auto flex-column">
+  <header class="masthead mb-auto justify-content-center">
+    <div class="inner">
+      <h1 class="masthead-brand mb-3">WriteAbout</h1>
+      <h3>A random writing prompt generator</h3>
+    </div>
+  </header>
 
-<p class="prompt">Write about <span><%= @prompt.prompt %></span></p>
+  <main role="main" class="inner cover">
+    <h2 class="display-4">
+      Write about <span><%= @prompt.prompt %>.</span>
+    </h2>
+  </main>
+
+  <footer class="mastfoot mt-auto">
+    <div class="inner">
+      <p>WriteAbout is a little web application by <%= link_to 'Matthew Lang', 'https://www.matthewlang.net' %>.</p>
+    </div>
+  </footer>
+</div>

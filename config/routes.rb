@@ -8,7 +8,7 @@ Rails.application.routes.draw do
 
       # Admin only routes
       namespace :admin do
-        resources :prompts, only: :index
+        resources :prompts, only: [:show, :index]
       end
     end
   end

@@ -11,6 +11,11 @@ module Api
 
           render json: prompts
         end
+        
+        def show
+          prompt = Prompt.find(params[:id]).slice(:id, :prompt, :full_prompt)
+          render json: prompt
+        end
 
         private
 

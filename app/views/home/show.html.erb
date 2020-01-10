@@ -1,3 +1,8 @@
-<h2 class="display-4">
+<h2 id="prompt" class="display-4 mb-4" data-text="Write about <%= @prompt.prompt %>.">
   <strong>Write about <span><%= @prompt.prompt %>.</span></strong>
 </h2>
+
+<div data-controller="clipboard">
+  <button id="copy-button" data-action="clipboard#copy" class="btn btn-light btn-lg">Copy to clipboard</button>
+  <div style="display: none;" id="copied" class="h6 mt-3">Copied!</div>
+</div>

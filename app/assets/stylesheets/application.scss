@@ -5,15 +5,14 @@ $enable-responsive-font-sizes: true;
 // Variables
 :root {
   --light-color: #f9f9f9;
-  --dark-color:  #333333;
-
+  --dark-color: #333333;
 }
 
 // Structure
 html,
 body {
   height: 100%;
-  font-family: 'Roboto', sans;
+  font-family: "Roboto", sans;
 }
 
 body {
@@ -45,9 +44,9 @@ body {
 }
 
 .nav-masthead .nav-link {
-  padding: .25rem 0;
+  padding: 0.25rem 0;
   font-weight: 700;
-  border-bottom: .25rem solid transparent;
+  border-bottom: 0.25rem solid transparent;
 }
 
 .nav-masthead .nav-link + .nav-link {
@@ -64,18 +63,20 @@ body {
   padding: 0 1.5rem;
 }
 .cover .btn-lg {
-  padding: .75rem 1.25rem;
+  padding: 0.75rem 1.25rem;
   font-weight: 700;
 }
 
-
 // Light theme
- body.light {
+body.light {
   background-color: var(--light-color);
   color: var(--dark-color);
 
   // Links
-  a, a:focus, a:hover {
+  a,
+  a:focus,
+  a:hover,
+  .btn-link {
     color: var(--dark-color);
   }
 
@@ -86,7 +87,16 @@ body {
     color: var(--light-color);
     text-shadow: none; // Prevent inheritance from `body`
     background-color: var(--dark-color);
-    border: .05rem solid var(--dark-color);
+    border: 0.05rem solid var(--dark-color);
+  }
+
+  .btn-light,
+  .btn-light:hover,
+  .btn-light:focus {
+    color: var(--light-color);
+    text-shadow: none; // Prevent inheritance from `body`
+    background-color: var(--dark-color);
+    border: 0.05rem solid var(--dark-color);
   }
 
   .nav-masthead .nav-link {
@@ -103,12 +113,11 @@ body {
     color: var(--dark-color);
     border-bottom-color: var(--dark-color);
   }
-  
+
   .mastfoot {
     color: var(--dark-color);
   }
 }
-
 
 // Dark theme
 body.dark {
@@ -116,7 +125,10 @@ body.dark {
   color: var(--light-color);
 
   // Links
-  a, a:focus, a:hover {
+  a,
+  a:focus,
+  a:hover,
+  .btn-link {
     color: var(--light-color);
   }
 
@@ -127,7 +139,7 @@ body.dark {
     color: var(--dark-color);
     text-shadow: none; // Prevent inheritance from `body`
     background-color: var(--light-color);
-    border: .05rem solid var(--light-color);
+    border: 0.05rem solid var(--light-color);
   }
 
   .nav-masthead .nav-link {
@@ -144,7 +156,7 @@ body.dark {
     color: var(--light-color);
     border-bottom-color: var(--light-color);
   }
-  
+
   .mastfoot {
     color: var(--light-color);
   }

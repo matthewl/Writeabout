@@ -12,7 +12,7 @@ Trestle.resource(:prompts) do
   # Define the index view table listing
   table do
     column :id, link: true
-    column :prompt
+    column :prompt, truncate: false
     column :updated_at, header: "Last Updated", align: :center
     actions
   end

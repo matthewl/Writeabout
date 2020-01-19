@@ -9,6 +9,8 @@ gem 'pg', '>= 0.18', '< 2.0'
 gem 'puma', '~> 4.3.1'
 gem 'rails', '~> 6.0.1'
 gem 'sass-rails', '>= 6'
+gem 'trestle'
+gem 'trestle-auth'
 gem 'turbolinks', '~> 5'
 gem 'webpacker', '~> 4.0'
 

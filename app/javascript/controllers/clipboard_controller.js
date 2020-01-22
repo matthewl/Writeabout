@@ -10,7 +10,7 @@ export default class extends Controller {
   }
 
   copy() {
-    var prompt = document.getElementById('prompt').getAttribute('data-text')
+    var prompt = this.sourceTarget.getAttribute('data-text')
     const el = document.createElement('textarea')
     el.value = prompt
     el.setAttribute('readonly', '')

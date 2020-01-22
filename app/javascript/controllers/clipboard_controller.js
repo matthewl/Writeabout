@@ -11,7 +11,7 @@ export default class extends Controller {
 
   copy() {
     var prompt = this.sourceTarget.getAttribute('data-text')
-    copyPrompt(prompt)
+    this.copyPrompt(prompt)
 
     this.notificationTarget.style.display = 'block'
     setTimeout(function () { this.notificationTarget.style.display = 'none' }, 5000);

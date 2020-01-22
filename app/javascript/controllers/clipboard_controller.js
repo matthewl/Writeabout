@@ -11,6 +11,14 @@ export default class extends Controller {
 
   copy() {
     var prompt = this.sourceTarget.getAttribute('data-text')
+    copyPrompt(prompt)
+
+    var done = document.getElementById('copied')
+    done.style.display = 'block'
+    setTimeout(function () { done.style.display = 'none' }, 5000);
+  }
+
+  copyPrompt(prompt) {
     const el = document.createElement('textarea')
     el.value = prompt
     el.setAttribute('readonly', '')
@@ -20,9 +28,5 @@ export default class extends Controller {
     el.select()
     document.execCommand('copy')
     document.body.removeChild(el)
-
-    var done = document.getElementById('copied')
-    done.style.display = 'block'
-    setTimeout(function () { done.style.display = 'none' }, 5000);
   }
 }

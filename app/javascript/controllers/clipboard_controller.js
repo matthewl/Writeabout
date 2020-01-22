@@ -1,7 +1,7 @@
 import { Controller } from "stimulus"
 
 export default class extends Controller {
-  static targets = [ "button", "source" ]
+  static targets = [ "button", "notification", "source" ]
 
   connect() {
     if (document.queryCommandSupported("copy")) {
@@ -13,9 +13,8 @@ export default class extends Controller {
     var prompt = this.sourceTarget.getAttribute('data-text')
     copyPrompt(prompt)
 
-    var done = document.getElementById('copied')
-    done.style.display = 'block'
-    setTimeout(function () { done.style.display = 'none' }, 5000);
+    this.notificationTarget.style.display = 'block'
+    setTimeout(function () { this.notificationTarget.style.display = 'none' }, 5000);
   }
 
   copyPrompt(prompt) {

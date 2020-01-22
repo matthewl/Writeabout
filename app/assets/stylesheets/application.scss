@@ -67,6 +67,15 @@ body {
   font-weight: 700;
 }
 
+#copy-button {
+  display: none;
+}
+
+#copy-button .clipboard--supported {
+  display: initial;
+}
+
+
 // Light theme
 body.light {
   background-color: var(--light-color);

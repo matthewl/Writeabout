@@ -67,11 +67,11 @@ body {
   font-weight: 700;
 }
 
-#copy-button {
+#copy-button, #switch-theme {
   display: none;
 }
 
-#copy-button.clipboard--supported {
+#copy-button.clipboard--supported, #switch-theme.theme--supported {
   display: initial;
 }
 

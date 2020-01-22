@@ -10,7 +10,7 @@ export default class extends Controller {
   }
 
   copy() {
-    var prompt = this.sourceTarget.getAttribute('data-text')
+    const prompt = this.sourceTarget.getAttribute('data-text')
     this.copyPrompt(prompt)
 
     this.notificationTarget.style.display = 'block'

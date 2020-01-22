@@ -1,8 +1,16 @@
 import { Controller } from "stimulus"
 
 export default class extends Controller {
+  static targets = ["button"]
+
+  connect() {
+    if (document.queryCommandSupported("copy")) {
+      this.buttonTarget.classList.add("theme--supported")
+    }
+  }
+
   switch() {
-    var body = document.body
+    const body = document.body
 
     if (body.classList.contains('light')) {
       body.classList.remove('light')

@@ -1,6 +1,6 @@
-https://img.shields.io/github/license/matthewl/writeabout
-
 # Welcome to WriteAbout
+
+![license](https://img.shields.io/github/license/matthewl/writeabout)
 
 ## What is WriteAbout?
 

@@ -1,3 +1,5 @@
+https://img.shields.io/github/license/matthewl/writeabout
+
 # Welcome to WriteAbout
 
 ## What is WriteAbout?

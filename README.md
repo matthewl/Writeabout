@@ -1,5 +1,8 @@
 # Welcome to WriteAbout
 
+![license](https://img.shields.io/github/license/matthewl/writeabout)
+![uptime](https://img.shields.io/website?url=https%3A%2F%2Fwriteabout.page)
+
 ## What is WriteAbout?
 
 WriteAbout is a random writing prompt generator. I've been frequently stuck with writing ideas in the past, but rather than looking for something planned to write about, I wanted to vary my writing.

@@ -3,7 +3,7 @@ module Api
     class BasecampPromptController < ApplicationController
       def create
         @prompt = Prompt.random
-        render layout: false
+        render :prompt, layout: false
       end
     end
   end

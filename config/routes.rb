@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   namespace :api, constraints: { format: 'json' } do
     namespace :v1 do
       resources :random_prompt, only: :index, path: 'prompts/random'
+      resources :basecamp_prompt, only: :index, path: 'prompts/basecamp'
 
       # Admin only routes
       namespace :admin do

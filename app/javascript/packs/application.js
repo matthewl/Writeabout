@@ -10,4 +10,4 @@ require("channels")
 require("jquery")
 
 import "controllers"
-require('css/application.scss')
+require("css/application.scss")

@@ -1,3 +1,62 @@
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
+
+// Variables
+:root {
+  --light-color: #f9f9f9;
+  --dark-color: #333333;
+}
+
+// Structure
+html,
+body {
+  font-family: "Fira Sans", sans;
+}
+
+#copy-button, #switch-theme {
+  display: none;
+}
+
+#copy-button.clipboard--supported, #switch-theme.theme--supported {
+  display: initial;
+}
+
+// Light theme
+body.light {
+  background-color: var(--light-color);
+  color: var(--dark-color);
+
+  #copy-button {
+    background-color: var(--dark-color);
+    border: 0.05rem solid var(--dark-color);
+    color: var(--light-color);
+  }
+
+  // Links
+  a,
+  a:focus,
+  a:hover {
+    color: var(--dark-color);
+  }
+}
+
+// Dark theme
+body.dark {
+  background-color: var(--dark-color);
+  color: var(--light-color);
+
+  // Links
+  a,
+  a:focus,
+  a:hover {
+    color: var(--light-color);
+  }
+
+  #copy-button {
+    background-color: var(--light-color);
+    border: 0.05rem solid var(--light-color);
+    color: var(--dark-color);
+  }
+}
+
 @import 'tailwindcss/utilities';

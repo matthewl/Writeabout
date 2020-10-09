@@ -16,34 +16,28 @@
     <link rel="apple-touch-icon" href="<%= image_url('apple-touch-icon.png') %>">
     <link rel="icon" href="<%= image_url('favicon.png') %>">
 
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_pack_tag 'stylesheets', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
-    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Fira+Sans&display=swap" rel="stylesheet">
   </head>
 
-  <body class="light text-center">
-    <div class="cover-container d-flex w-100 h-100 py-3 mx-auto flex-column">
-      <header class="masthead mb-auto justify-content-center">
-        <div class="inner">
-          <h1 class="masthead-brand mb-3">Writeabout</h1>
-          <h4 class="masthead-subtitle">A random writing prompt generator</h3>
-        </div>
-      </header>
+  <body class="light flex flex-col h-screen relative">
+    <header class="w-full h-32 text-center p-8">
+      <h1 class="text-5xl font-bold">Writeabout</h1>
+      <h4 class="text-2xl">A random writing prompt generator</h3>
+    </header>
 
-      <main role="main" class="inner cover">
-        <%= yield %>
-      </main>
+    <main class="flex-grow flex items-center w-full text-center mx-auto">
+      <%= yield %>
+    </main>
 
-      <footer class="mastfoot mt-auto">
-        <div class="inner">
-          <div data-controller="theme">
-            <button id="switch-theme" data-target="theme.button" data-action="theme#switch" class="btn btn-link">Switch theme</button>
-          </div>
-          <p>Writeabout is a <%= link_to 'Ruby on Rails', 'https://www.rubyonrails.org' %> application by <%= link_to 'Matthew Lang', 'https://www.matthewlang.net' %> &bull; Source code available on <%= link_to 'GitHub', 'https://github.com/matthewl/Writeabout' %></p>
-        </div>
-      </footer>
-    </div>
-    
+    <footer class="absolute bottom-0 w-full p-8 text-center">
+      <div data-controller="theme">
+        <button id="switch-theme" data-target="theme.button" data-action="theme#switch" class="btn p-4">Switch theme</button>
+      </div>
+
+      <p>Writeabout is a <%= link_to 'Ruby on Rails', 'https://www.rubyonrails.org', class: 'hover:underline' %> application by <%= link_to 'Matthew Lang', 'https://www.matthewlang.net', class: 'hover:underline' %> &bull; Source code available on <%= link_to 'GitHub', 'https://github.com/matthewl/Writeabout', class: 'hover:underline' %></p>
+    </footer>
   </body>
 
   <!-- Fathom - simple website analytics - https://usefathom.com -->

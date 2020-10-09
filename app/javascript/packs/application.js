@@ -10,4 +10,4 @@ require("channels")
 require("jquery")
 
 import "controllers"
-import "bootstrap"
+require("css/application.scss")

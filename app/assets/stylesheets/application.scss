@@ -1,6 +1,5 @@
-$enable-responsive-font-sizes: true;
-
-@import "bootstrap/scss/bootstrap";
+@tailwind base;
+@tailwind components;
 
 // Variables
 :root {
@@ -11,61 +10,7 @@ $enable-responsive-font-sizes: true;
 // Structure
 html,
 body {
-  height: 100%;
-  font-family: "Roboto", sans;
-}
-
-body {
-  display: -ms-flexbox;
-  display: flex;
-  padding: 20px;
-}
-
-.cover-container {
-  max-width: 100%;
-}
-
-// Medium devices (tablets, 768px and up)
-@media (min-width: 768px) {
-  .cover-container {
-    max-width: 58em;
-  }
-}
-
-.masthead {
-  margin-bottom: 2rem;
-}
-
-.masthead-brand {
-  margin-bottom: 0;
-}
-
-.masthead-subtitle {
-  font-weight: 300;
-}
-
-.nav-masthead .nav-link {
-  padding: 0.25rem 0;
-  font-weight: 700;
-  border-bottom: 0.25rem solid transparent;
-}
-
-.nav-masthead .nav-link + .nav-link {
-  margin-left: 1rem;
-}
-
-@media (min-width: 48em) {
-  .nav-masthead {
-    float: right;
-  }
-}
-
-.cover {
-  padding: 0 1.5rem;
-}
-.cover .btn-lg {
-  padding: 0.75rem 1.25rem;
-  font-weight: 700;
+  font-family: "Fira Sans", sans;
 }
 
 #copy-button, #switch-theme {
@@ -76,55 +21,21 @@ body {
   display: initial;
 }
 
-
 // Light theme
 body.light {
   background-color: var(--light-color);
   color: var(--dark-color);
 
+  #copy-button {
+    background-color: var(--dark-color);
+    border: 0.05rem solid var(--dark-color);
+    color: var(--light-color);
+  }
+
   // Links
   a,
   a:focus,
-  a:hover,
-  .btn-link {
-    color: var(--dark-color);
-  }
-
-  // Custom default button
-  .btn-secondary,
-  .btn-secondary:hover,
-  .btn-secondary:focus {
-    color: var(--light-color);
-    text-shadow: none; // Prevent inheritance from `body`
-    background-color: var(--dark-color);
-    border: 0.05rem solid var(--dark-color);
-  }
-
-  .btn-light,
-  .btn-light:hover,
-  .btn-light:focus {
-    color: var(--light-color);
-    text-shadow: none; // Prevent inheritance from `body`
-    background-color: var(--dark-color);
-    border: 0.05rem solid var(--dark-color);
-  }
-
-  .nav-masthead .nav-link {
-    color: var(--dark-color);
-    background-color: transparent;
-  }
-
-  .nav-masthead .nav-link:hover,
-  .nav-masthead .nav-link:focus {
-    border-bottom-color: var(--dark-color);
-  }
-
-  .nav-masthead .active {
-    color: var(--dark-color);
-    border-bottom-color: var(--dark-color);
-  }
-
-  .mastfoot {
+  a:hover {
     color: var(--dark-color);
   }
 }
@@ -137,37 +48,15 @@ body.dark {
   // Links
   a,
   a:focus,
-  a:hover,
-  .btn-link {
+  a:hover {
     color: var(--light-color);
   }
 
-  // Custom default button
-  .btn-secondary,
-  .btn-secondary:hover,
-  .btn-secondary:focus {
-    color: var(--dark-color);
-    text-shadow: none; // Prevent inheritance from `body`
+  #copy-button {
     background-color: var(--light-color);
     border: 0.05rem solid var(--light-color);
-  }
-
-  .nav-masthead .nav-link {
-    color: var(--light-color);
-    background-color: transparent;
-  }
-
-  .nav-masthead .nav-link:hover,
-  .nav-masthead .nav-link:focus {
-    border-bottom-color: var(--light-color);
-  }
-
-  .nav-masthead .active {
-    color: var(--light-color);
-    border-bottom-color: var(--light-color);
-  }
-
-  .mastfoot {
-    color: var(--light-color);
+    color: var(--dark-color);
   }
 }
+
+@tailwind utilities;

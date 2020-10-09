@@ -1,7 +1,8 @@
-<div data-controller="clipboard">
-  <h2 id="prompt" data-target="clipboard.source" class="display-4 mb-4" data-text="Write about <%= @prompt.prompt %>.">
+<div data-controller="clipboard" class="w-full -mt-20">
+  <h2 id="prompt" data-target="clipboard.source" class="mb-8 text-3xl w-2/3 mx-auto" data-text="Write about <%= @prompt.prompt %>.">
     <strong>Write about <span><%= @prompt.prompt %>.</span></strong>
   </h2>
-  <button id="copy-button" data-target="clipboard.button" data-action="clipboard#copy" class="btn btn-light">Copy to clipboard</button>
+
+  <button id="copy-button" data-target="clipboard.button" data-action="clipboard#copy" class="p-4 rounded">Copy to clipboard</button>
   <div data-target="clipboard.notification" style="display: none;" id="copied" class="h6 mt-3">Copied!</div>
 </div>

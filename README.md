@@ -1,7 +1,7 @@
 # Welcome to WriteAbout
 
 ![license](https://img.shields.io/github/license/matthewl/writeabout)
-![uptime](https://img.shields.io/website?url=https%3A%2F%2Fwriteabout.page)
+![uptime](https://img.shields.io/website?url=https%3A%2F%2Fwww.writeabout.page)
 
 ## What is WriteAbout?
 

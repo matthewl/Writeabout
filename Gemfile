@@ -3,11 +3,11 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.7.0'
 
-gem 'bootsnap', '>= 1.4.2', require: false
+gem 'bootsnap', '>= 1.4.6', require: false
 gem 'jbuilder', '~> 2.7'
 gem 'pg', '>= 0.18', '< 2.0'
 gem 'rails', '~> 6.1'
-gem 'puma', '~> 4.3.3'
+gem 'puma', '~> 5.3'
 gem 'sass-rails', '>= 6'
 gem 'turbolinks', '~> 5'
 gem 'webpacker', '~> 4.0'

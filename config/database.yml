@@ -10,3 +10,7 @@ development:
 test:
   <<: *default
   database: writeabout_test
+
+production:
+  <<: *default
+  url: <%= ENV['DATABASE_URL'] %>

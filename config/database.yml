@@ -13,4 +13,6 @@ test:
 
 production:
   <<: *default
-  url: <%= ENV['DATABASE_URL'] %>
+  database: writeabout_production
+  username: writeabout_production_user
+  password: <%= ENV["BOOKMARKS_DATABASE_PASSWORD"] %>

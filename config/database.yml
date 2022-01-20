@@ -15,4 +15,4 @@ production:
   <<: *default
   database: writeabout_production
   username: writeabout_production_user
-  password: <%= ENV["BOOKMARKS_DATABASE_PASSWORD"] %>
+  password: <%= ENV["WRITEABOUT_DATABASE_PASSWORD"] %>

@@ -16,8 +16,8 @@
     <link rel="apple-touch-icon" href="<%= image_tag('apple-touch-icon.png') %>">
     <link rel="icon" href="<%= image_tag('favicon.png') %>">
 
-    <%= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
     <link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
   </head>
 
@@ -28,7 +28,8 @@
     </header>
 
     <main class="flex-grow flex items-center w-full text-center mx-auto">
-      <%= yield %>
+    <main class="container mx-auto mt-28 px-5 flex">
+        <%= yield %>
     </main>
 
     <footer class="absolute bottom-0 w-full p-8 text-center">

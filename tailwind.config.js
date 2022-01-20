@@ -1,19 +1,10 @@
 module.exports = {
-  future: {
-    removeDeprecatedGapUtilities: true,
-    purgeLayersByDefault: true,
-  },
-    purge: [
-    './app/**/*.html.erb',
+  content: [
+    './app/views/**/*.html.erb',
     './app/helpers/**/*.rb',
-    './src/**/*.html',
-    './src/**/*.vue',
-    './src/**/*.jsx',
+    './app/javascript/**/*.js'
   ],
-
-  theme: {
-    extend: {},
-  },
-  variants: {},
-  plugins: [require('@tailwindcss/ui')],
+  plugins: [
+    require('@tailwindcss/forms')
+  ]
 }

@@ -2,12 +2,42 @@
 @tailwind components;
 @tailwind utilities;
 
-/*
+:root {
+  --light-color: #f9f9f9;
+  --dark-color: #333333; }
 
-@layer components {
-  .btn-primary {
-    @apply py-2 px-4 bg-blue-200;
-  }
-}
+html,
+body {
+  font-family: "Inter", sans; }
 
-*/
+#copy-button, #switch-theme {
+  display: none; }
+
+#copy-button.clipboard--supported, #switch-theme.theme--supported {
+  display: initial; }
+
+body.light {
+  background-color: var(--light-color);
+  color: var(--dark-color); }
+  body.light #copy-button {
+    background-color: var(--dark-color);
+    border: 0.05rem solid var(--dark-color);
+    color: var(--light-color); }
+  body.light a,
+  body.light a:focus,
+  body.light a:hover {
+    color: var(--dark-color); }
+
+body.dark {
+  background-color: var(--dark-color);
+  color: var(--light-color); }
+  body.dark a,
+  body.dark a:focus,
+  body.dark a:hover {
+    color: var(--light-color); }
+  body.dark #copy-button {
+    background-color: var(--light-color);
+    border: 0.05rem solid var(--light-color);
+    color: var(--dark-color); }
+
+

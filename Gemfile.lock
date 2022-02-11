@@ -140,7 +140,7 @@ GEM
       racc (~> 1.4)
     pg (1.2.3)
     public_suffix (4.0.6)
-    puma (5.5.2)
+    puma (5.6.2)
       nio4r (~> 2.0)
     racc (1.6.0)
     rack (2.2.3)
@@ -237,7 +237,7 @@ DEPENDENCIES
   jsbundling-rails (~> 0.1.0)
   listen (>= 3.0.5, < 3.2)
   pg (~> 1.1)
-  puma (~> 5.0)
+  puma (~> 5.6)
   rails (~> 7.0.0)
   redis (~> 4.0)
   selenium-webdriver

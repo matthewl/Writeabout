@@ -1,70 +1,32 @@
 import { Controller } from "@hotwired/stimulus"
 
 export default class extends Controller {
-  static targets = ["button"]
+  static targets = ["light", "dark", "system"]
 
   connect() {
-    if (document.queryCommandSupported("copy")) {
-      this.buttonTarget.classList.add("theme--supported")
-      this.readCookieTheme()
-    }
+    this.switchTheme()
   }
 
-  switch() {
-    let body = document.body
-
-    if (body.classList.contains('light')) {
-      this.switchToDark()
-      this.writeCookieTheme('dark')
-    }
-    else
-    {
-      this.switchToLight()
-      this.writeCookieTheme('light')
-    }
-  }
-
-  switchTheme(theme) {
-    if (theme == 'dark') {
-      this.switchToDark()
-      this.writeCookieTheme('dark')
-    }
-    else
-    {
-      this.switchToLight()
-      this.writeCookieTheme('light')
+  switchTheme() {
+    if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      document.documentElement.classList.add('dark')
+    } else {
+      document.documentElement.classList.remove('dark')
     }
   }
 
   switchToLight() {
-    let body = document.body
-    body.classList.remove('dark')
-    body.classList.add('light')
+    localStorage.theme = 'light'
+    this.switchTheme()
   }
 
   switchToDark() {
-    let body = document.body
-    body.classList.remove('light')
-    body.classList.add('dark')
+    localStorage.theme = 'dark'
+    this.switchTheme()
   }
 
-  writeCookieTheme(theme) {
-    let now = new Date()
-    now.setMonth( now.getYear() + 10 )
-    document.cookie = "theme=" + theme
-    document.cookie = "expires=" + now.toUTCString() + ";"
-  }
-
-  readCookieTheme() {
-    const allcookies = document.cookie
-    const cookiearray = allcookies.split(';')
-    
-    for(var i=0; i<cookiearray.length; i++) {
-      const name = cookiearray[i].split('=')[0].trim()
-      const value = cookiearray[i].split('=')[1].trim()
-      if (name == 'theme') {
-        this.switchTheme(value)
-      }
-    }
+  switchToSystem() {
+    localStorage.removeItem('theme')
+    this.switchTheme()
   }
 }

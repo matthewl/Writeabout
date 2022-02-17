@@ -23,37 +23,37 @@
 
   <body class="flex flex-col h-screen bg-slate-50 dark:bg-slate-800">
     <header class="flex flex-col w-full h-32 p-8 space-y-2 text-center text-slate-800 dark:text-slate-50">
-      <h1 class="text-5xl font-bold">Writeabout</h1>
-      <h4 class="text-2xl">A random writing prompt generator</h3>
+      <h1 class="text-3xl font-bold md:text-5xl">Writeabout</h1>
+      <h4 class="text-xl md:text-2xl">A random writing prompt generator</h3>
     </header>
 
     <main class="flex items-center flex-grow w-full mx-auto text-center">
       <%= yield %>
     </main>
 
-    <footer class="absolute bottom-0 w-full p-8 space-y-1 text-center">
-      <div data-controller="theme">
+    <footer class="absolute bottom-0 w-full p-8 space-y-1 text-sm md:text-base">
+      <div data-controller="theme" class="flex justify-center w-full mx-auto my-4 space-x-4">
         <button class="text-yellow-500" data-theme-target="light" data-action="theme#switchToLight">
-          <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
           </svg>
         </button>
 
         <button class="text-blue-500" data-theme-target="dark" data-action="theme#switchToDark">
-          <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
           </svg>
         </button>
 
         <button class="text-slate-800 dark:text-slate-50" data-theme-target="system" data-action="theme#switchToSystem">
-          <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
           </svg>
         </button>
       </div>
 
-      <p class="text-slate-800 dark:text-slate-50">Writeabout is a <%= link_to 'Ruby on Rails', 'https://www.rubyonrails.org', class: 'hover:underline' %> application by <%= link_to 'Matthew Lang', 'https://matthewlang.me', class: 'hover:underline' %></p>
-      <p class="text-slate-800 dark:text-slate-50">Source code available on <%= link_to 'GitHub', 'https://github.com/matthewl/Writeabout', class: 'hover:underline' %></p>
+      <p class="text-center text-slate-800 dark:text-slate-50">Writeabout is a <%= link_to 'Ruby on Rails', 'https://www.rubyonrails.org', class: 'hover:underline' %> application by <%= link_to 'Matthew Lang', 'https://matthewlang.me', class: 'hover:underline' %></p>
+      <p class="text-center text-slate-800 dark:text-slate-50">Source code available on <%= link_to 'GitHub', 'https://github.com/matthewl/Writeabout', class: 'hover:underline' %></p>
     </footer>
   </body>
 

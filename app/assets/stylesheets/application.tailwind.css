@@ -3,6 +3,11 @@
 @import "tailwindcss/utilities";
 @import "tailwindcss/variants";
 
+@font-face {
+  font-family: 'Open Sans';
+  src: url('OpenSans-VariableFont_wdth,wght.ttf')
+}
+
 body {
-  font-family: "Inter", sans;
+  font-family: "Open Sans", sans;
 }

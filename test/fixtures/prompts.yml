@@ -11,3 +11,27 @@ autumn:
 
 winter:
   prompt: the cold dark nights of winter
+
+app:
+  prompt: the top five apps for iOS
+
+websites:
+  prompt: the top five websites
+
+fonts:
+  prompt: the top five fonts
+
+terminals:
+  prompt: the top five terminal emulators
+
+editors:
+  prompt: the top five text editors
+
+podcasts:
+  prompt: the top five podcasts
+
+books:
+  prompt: the top five books
+
+movies:
+  prompt: the top five movies

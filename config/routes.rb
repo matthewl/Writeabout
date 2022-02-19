@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   root 'home#show'
+  get '/feed', to: 'feed#index', defaults: { format: 'xml' }
 
   # API routes
   namespace :api, constraints: { format: 'json' } do

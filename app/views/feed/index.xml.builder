@@ -10,7 +10,7 @@ xml.rss version: '2.0' do
         xml.title prompt.full_prompt
         xml.pubDate prompt.created_at.to_fs(:rfc822)
         xml.link ''
-        xml.guid ''
+        xml.guid prompt.public_id
       end
     end
   end

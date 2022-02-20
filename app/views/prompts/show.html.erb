@@ -1,0 +1,28 @@
+<div data-controller="clipboard" class="w-full">
+  <h2
+    id="prompt"
+    data-target="clipboard.source"
+    data-text="Write about <%= @prompt.prompt %>."
+    class="w-2/3 mx-auto mb-2 text-xl md:mb-4 lg:mb-8 md:text-2xl lg:text-4xl text-slate-800 dark:text-slate-50"
+  >
+    <strong>Write about <span><%= @prompt.prompt %>.</span></strong>
+  </h2>
+
+  <button
+    id="copy-button"
+    data-target="clipboard.button"
+    data-action="clipboard#copy"
+    class="px-4 py-2 text-xs rounded md:text-sm bg-slate-800 text-slate-50 dark:bg-slate-50 dark:text-slate-800 lg:text-base"
+  >
+    Copy to clipboard
+  </button>
+
+  <div
+    data-target="clipboard.notification"
+    style="display: none;"
+    id="copied"
+    class="h-6 mt-3 text-xs md:text-sm lg:text-base"
+  >
+    Copied!
+  </div>
+</div>

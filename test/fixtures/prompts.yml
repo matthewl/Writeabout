@@ -2,12 +2,48 @@
 
 spring:
   prompt: the changing of winter to spring
+  public_id: <%= SecureRandom.base58(24) %>
 
 summer:
   prompt: the long summer nights
+  public_id: <%= SecureRandom.base58(24) %>
 
 autumn:
   prompt: the falling leaves of autumn
+  public_id: <%= SecureRandom.base58(24) %>
 
 winter:
   prompt: the cold dark nights of winter
+  public_id: <%= SecureRandom.base58(24) %>
+
+app:
+  prompt: the top five apps for iOS
+  public_id: <%= SecureRandom.base58(24) %>
+
+websites:
+  prompt: the top five websites
+  public_id: <%= SecureRandom.base58(24) %>
+
+fonts:
+  prompt: the top five fonts
+  public_id: <%= SecureRandom.base58(24) %>
+
+terminals:
+  prompt: the top five terminal emulators
+  public_id: <%= SecureRandom.base58(24) %>
+
+editors:
+  prompt: the top five text editors
+  public_id: <%= SecureRandom.base58(24) %>
+
+podcasts:
+  prompt: the top five podcasts
+  public_id: <%= SecureRandom.base58(24) %>
+
+books:
+  prompt: the top five books
+  public_id: <%= SecureRandom.base58(24) %>
+
+movies:
+  prompt: the top five movies
+  public_id: <%= SecureRandom.base58(24) %>

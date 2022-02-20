@@ -9,10 +9,13 @@ Bundler.require(*Rails.groups)
 module WriteAbout
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
-    config.load_defaults 6.0
+    config.load_defaults 6.1
 
     # Migrate to new database connection handling.
     config.active_record.legacy_connection_handling = false
+
+    # Use our own handlers for errors.
+    config.exceptions_app = self.routes
 
     # Configuration for the application, engines, and railties goes here.
     #

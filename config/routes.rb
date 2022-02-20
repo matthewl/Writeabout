@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
+  match '/404', to: 'errors#not_found', via: :all, as: 'not_found'
+  match '/500', to: 'errors#internal_server_error', via: :all, as: 'internal_server_error'
+
   root 'home#show'
+  resources :prompts, only: :show
   get '/feed', to: 'feed#index', defaults: { format: 'xml' }
 
   # API routes
@@ -10,7 +14,7 @@ Rails.application.routes.draw do
 
       # Admin only routes
       namespace :admin do
-        resources :prompts, only: [:show, :index]
+        resources :prompts, only: %i[show index]
       end
     end
   end

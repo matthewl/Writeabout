@@ -2,6 +2,8 @@ class Prompt < ApplicationRecord
   RANDOM_COUNT = 1
   LIMIT_COUNT = 10
 
+  has_secure_token :public_id
+
   def full_prompt
     "Write about #{prompt}."
   end

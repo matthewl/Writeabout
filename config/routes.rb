@@ -4,7 +4,7 @@ Rails.application.routes.draw do
 
   root 'home#show'
   resources :prompts, only: :show
-  get '/feed', to: 'feed#index', defaults: { format: 'xml' }
+  get '/feed', to: 'home#show', defaults: { format: 'rss' }
 
   # API routes
   namespace :api, constraints: { format: 'json' } do

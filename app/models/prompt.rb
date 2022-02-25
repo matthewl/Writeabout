@@ -4,6 +4,8 @@ class Prompt < ApplicationRecord
 
   has_secure_token :public_id
 
+  attr_accessor :published_at
+
   def full_prompt
     "Write about #{prompt}."
   end

@@ -35,5 +35,5 @@ group :test do
 end
 
 # Additonal application gems
-
+gem 'rack-cors'
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]

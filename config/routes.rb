@@ -6,6 +6,10 @@ Rails.application.routes.draw do
   resources :prompts, only: :show
   get '/feed', to: 'home#show', defaults: { format: 'rss' }
 
+  namespace :admin
+    resource :home, only: :index
+  end
+
   # API routes
   namespace :api, constraints: { format: 'json' } do
     namespace :v1 do

@@ -17,7 +17,7 @@
     <link rel="icon" href="<%= image_path('favicon.png') %>">
 
     <%= auto_discovery_link_tag(:rss, "https://www.writeabout.page/feed", { title: "Prompts feed" }) %>
-    
+
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
     <script src="https://cdn.usefathom.com/script.js" data-site="<%= ENV['FATHOM_SITE_ID'] %>" defer></script>
@@ -29,9 +29,18 @@
       <h2 class="text-sm md:text-base lg:text-xl">A random writing prompt generator</h2>
     </header>
 
-    <main class="flex items-center flex-grow w-full mx-auto text-center">
-      <%= yield %>
-    </main>
+    <% if request.url.include?("admin") %>
+      <div class="flex w-full justify-center">
+        <main class="w-5/8 lg:w-2/3 2xl:w-1/2">
+          <%= yield %>
+        </main>
+      </div>
+    <% else %>
+      <main class="flex items-center flex-grow w-full mx-auto text-center">
+        <%= yield %>
+      </main>
+    <% end %>
+
 
     <footer class="w-3/4 p-2 mx-auto space-y-1 text-sm md:w-full md:p-4 lg:p-8 md:text-base">
       <div data-controller="theme" class="flex justify-center w-full mx-auto my-4 space-x-2 md:space-x-4 lg:space-x-6">
@@ -54,9 +63,16 @@
         </button>
       </div>
 
-      <div class="space-y-1 text-xs md:text-sm lg:text-base">
+      <div class="space-y-2 text-xs md:text-sm lg:text-base">
         <p class="text-center text-slate-800 dark:text-slate-50">Writeabout is a <%= link_to 'Ruby on Rails', 'https://www.rubyonrails.org', class: 'hover:underline' %> application by <%= link_to 'Matthew Lang', 'https://matthewlang.me', class: 'hover:underline' %></p>
-        <p class="text-center text-slate-800 dark:text-slate-50">Source code available on <%= link_to 'GitHub', 'https://github.com/matthewl/Writeabout', class: 'hover:underline' %></p>
+        <div class="flex space-x-2 justify-center text-slate-800 dark:text-slate-50">
+          <span>Source code available on <%= link_to 'GitHub', 'https://github.com/matthewl/Writeabout', class: 'hover:underline' %></span>
+          <% if account_signed_in? %>
+            <span>&middot;</span>
+            <span><%= button_to "Log out", logout_path, method: :delete %></span>
+          <% end %>
+          <span>
+        </div>
       </div>
     </footer>
   </body>

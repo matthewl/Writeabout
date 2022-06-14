@@ -1,0 +1,18 @@
+<!-- app/views/active_sessions/_active_session.html.erb -->
+<tr>
+  <td class="whitespace-nowrap py-2 pl-4 pr-2 text-sm font-medium text-gray-900">
+    <%= active_session.user_agent %>
+  </td>
+
+  <td class="whitespace-nowrap px-2 py-2 text-sm text-gray-500">
+    <%= active_session.ip_address %>
+  </td>
+
+  <td class="whitespace-nowrap px-2 py-2 text-sm text-gray-500">
+    <%= "#{time_ago_in_words(active_session.created_at)} ago" %>
+  </td>
+
+  <td class="relative whitespace-nowrap py-2 pl-2 pr-2 text-right text-xs font-medium">
+    <%= button_to "Sign Out", active_session_path(active_session), method: :delete, class: "inline-flex items-center justify-center rounded-md border border-transparent bg-sky-500 px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 sm:w-auto" %>
+  </td>
+</tr>

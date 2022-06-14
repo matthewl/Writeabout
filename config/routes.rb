@@ -6,7 +6,17 @@ Rails.application.routes.draw do
   resources :prompts, only: :show
   get "/feed", to: "home#show", defaults: {format: "rss"}
 
+  post "login", to: "sessions#create"
+  delete "logout", to: "sessions#destroy"
+  get "login", to: "sessions#new"
+
   resources :admin, only: :index
+
+  resources :active_sessions, only: [:destroy] do
+    collection do
+      delete "destroy_all"
+    end
+  end
 
   # API routes
   namespace :api, constraints: {format: "json"} do

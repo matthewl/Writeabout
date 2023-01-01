@@ -6,10 +6,16 @@ default: &default
 development:
   <<: *default
   database: writeabout_development
+  host: 127.0.0.1
+  port: 5434
+  username: writeabout_user
 
 test:
   <<: *default
   database: writeabout_test
+  host: 127.0.0.1
+  port: 5434
+  username: writeabout_user
 
 production:
   <<: *default

@@ -1,0 +1,41 @@
+# docker-compose.yml
+---
+version: '3.8'
+
+# The "services" directive lists all the services your
+# app depends on. In this case there's only one: PostgreSQL.
+services:
+
+  # We give each service an arbitrary name. I've called
+  # our PostgreSQL service "postgresql".
+  postgres:
+
+    # Docker Hub hosts images of common services for
+    # people to use. The postgres:13.1-alpine is an
+    # image that uses the Alpine Linux distribution,
+    # very lightweight Linux distribution that people
+    # often use when Dockerizing development environments.
+    image: postgres:14.4-alpine
+
+    # PostgreSQL has to put its data somewhere. Here
+    # we're saying to put the data in /var/lib/postgresql/data.
+    # The "delegated" part specifies the strategy for
+    # syncing the container's data with our host machine.
+    # (Another option would be "cached".)
+    volumes:
+      - postgresql:/var/lib/postgresql/data:delegated
+
+    # This says to make our PostgreSQL service available
+    # on port 5432.
+    ports:
+      - "127.0.0.1:5434:5432"
+
+    # This section specifies any environment variables
+    # that we want to exist on our Docker container.
+    environment:
+      POSTGRES_USER: writeabout_user
+      POSTGRES_HOST_AUTH_METHOD: trust
+
+volumes:
+  postgresql:
+  storage:

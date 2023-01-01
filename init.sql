@@ -1,0 +1,1 @@
+CREATE USER writeabout_user SUPERUSER

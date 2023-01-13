@@ -11,7 +11,7 @@ gem "cssbundling-rails", ">= 0.1.0" # Bundle and process CSS [https://github.com
 gem "jbuilder" # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 gem "jsbundling-rails", "~> 0.1.0" # Bundle and transpile JavaScript [https://github.com/rails/jsbundling-rails]
 gem "pg", "~> 1.1" # Use postgresql as the database for Active Record
-gem "puma", "~> 5.0" # Use the Puma web server [https://github.com/puma/puma]
+gem "puma", "~> 5.6" # Use the Puma web server [https://github.com/puma/puma]
 gem "redis", "~> 4.0" # Redis adapter for Active Job
 gem "sassc-rails" # Use SassC for faster CSS compilation
 gem "sprockets-rails" # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]

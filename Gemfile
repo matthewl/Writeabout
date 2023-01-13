@@ -16,6 +16,9 @@ gem "tailwindcss-rails" # Use Tailwind CSS [https://github.com/rails/tailwindcss
 gem "jbuilder" # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 gem "bootsnap", ">= 1.4.4", require: false # Reduces boot times through caching; required in config/boot.rb
 gem "redis", "~> 4.0"
+gem "trestle"
+gem "sassc-rails"
+
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]

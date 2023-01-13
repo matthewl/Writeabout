@@ -1,4 +1,8 @@
 Trestle.resource(:administrators, model: Administrator, scope: Auth) do
+  remove_action :new
+  remove_action :destroy
+  remove_action :update
+
   menu do
     group :configuration, priority: :last do
       item :administrators, icon: "fas fa-users"
@@ -18,11 +22,11 @@ Trestle.resource(:administrators, model: Administrator, scope: Auth) do
   end
 
   form do |administrator|
-    text_field :email
+    text_field :email, readonly: instance.persisted?
 
     row do
-      col(sm: 6) { text_field :first_name }
-      col(sm: 6) { text_field :last_name }
+      col(sm: 6) { text_field :first_name, readonly: instance.persisted? }
+      col(sm: 6) { text_field :last_name, readonly: instance.persisted? }
     end
   end
 end

@@ -232,6 +232,8 @@ GEM
     trestle-auth (0.4.4)
       bcrypt (~> 3.1.7)
       trestle (~> 0.9.0, >= 0.9.3)
+    trestle-search (0.4.3)
+      trestle (~> 0.9.0, >= 0.9.3)
     turbo-rails (1.0.1)
       actionpack (>= 6.0.0)
       railties (>= 6.0.0)
@@ -278,6 +280,7 @@ DEPENDENCIES
   tailwindcss-rails
   trestle
   trestle-auth
+  trestle-search
   turbo-rails
   tzinfo-data
   web-console (>= 3.3.0)

@@ -3,6 +3,14 @@ Trestle.resource(:prompts) do
     item :prompts, icon: "fa fa-star"
   end
 
+  search do |query|
+    if query
+      Prompt.where("prompt ILIKE ?", "%#{query}%")
+    else
+      Prompt.all
+    end
+  end
+
   # Customize the table columns shown on the index view.
   #
   # table do

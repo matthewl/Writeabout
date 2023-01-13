@@ -21,6 +21,7 @@ gem "turbo-rails" # Hotwire's SPA-like page accelerator [https://turbo.hotwired.
 
 # Application gems
 gem "trestle-auth"
+gem "trestle-search"
 gem "trestle"
 
 

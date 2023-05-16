@@ -3,29 +3,16 @@ import { Controller } from "@hotwired/stimulus"
 export default class extends Controller {
   static targets = [ "button", "notification", "source" ]
 
-  connect() {
-    if (document.queryCommandSupported("copy")) {
-      this.buttonTarget.classList.add("clipboard--supported")
-    }
-  }
+  connect() {}
 
   copy() {
-    const prompt = this.sourceTarget.getAttribute('data-text')
-    this.copyPrompt(prompt)
+    event.preventDefault()
+    const text = this.sourceTarget.getAttribute("data-text")
+    navigator.clipboard.writeText(text)
 
-    this.notificationTarget.style.display = 'block'
-    setTimeout(function () { this.notificationTarget.style.display = 'none' }, 5000);
-  }
-
-  copyPrompt(prompt) {
-    const el = document.createElement('textarea')
-    el.value = prompt
-    el.setAttribute('readonly', '')
-    el.style.position = 'absolute'
-    el.style.left = '-9999px'
-    document.body.appendChild(el)
-    el.select()
-    document.execCommand('copy')
-    document.body.removeChild(el)
+    this.buttonTarget.textContent = "Copied!"
+    setTimeout(() => {
+      this.buttonTarget.textContent = "Copy to clipboard"
+    }, 1000)
   }
 }

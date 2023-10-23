@@ -17,10 +17,9 @@
     <link rel="icon" href="<%= image_path('favicon.png') %>">
 
     <%= auto_discovery_link_tag(:rss, "https://www.writeabout.page/feed", { title: "Prompts feed" }) %>
-    
+
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
-    <script src="https://cdn.usefathom.com/script.js" data-site="<%= ENV['FATHOM_SITE_ID'] %>" defer></script>
   </head>
 
   <body class="flex flex-col h-screen bg-slate-50 dark:bg-slate-800">
@@ -58,6 +57,7 @@
         <p class="text-center text-slate-800 dark:text-slate-50">Writeabout is a <%= link_to 'Ruby on Rails', 'https://www.rubyonrails.org', class: 'hover:underline' %> application by <%= link_to 'Matthew Lang', 'https://matthewlang.me', class: 'hover:underline' %></p>
         <p class="text-center text-slate-800 dark:text-slate-50">Source code available on <%= link_to 'GitHub', 'https://github.com/matthewl/Writeabout', class: 'hover:underline' %></p>
       </div>
+      <script src="https://tinylytics.app/embed/ZATgznvoS9y4P3Hd2j3m.js" defer></script>
     </footer>
   </body>
 </html>

@@ -6,6 +6,8 @@ ruby '3.2.4'
 gem "rails", "~> 7.1.0"
 
 # Core gems
+gem "bcrypt"
+
 gem "bootsnap", ">= 1.18.0", require: false # Reduces boot times through caching; required in config/boot.rb
 gem "cssbundling-rails", "1.4.0" # Bundle and process CSS [https://github.com/rails/cssbundling-rails]
 gem "jbuilder" # Build JSON APIs with ease [https://github.com/rails/jbuilder]
